@@ -6,7 +6,7 @@ The first step: enter your number.
 The second step: the program will print all divisors.  
 
 ### CONSTRAINTS
-| Language | Constrains |
+| Language | Constraints |
 | --- | --- |
 | Rust | `0 <= your number < 2^128` |
 | C++ | `0 <= your number < 2^64` |
