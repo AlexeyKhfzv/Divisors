@@ -30,4 +30,4 @@ All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803)
 
 `3 ^2` - here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3<sup>2</sup> = 3 * 3).
 
-Indeed, 2 * 3<sup>2</sup> * 5 * 3607 * 3803 = 1234567890
+Indeed, 2 × 3<sup>2</sup> × 5 × 3607 × 3803 = 1234567890
