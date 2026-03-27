@@ -1,6 +1,6 @@
 # Divisors
-Very FAST code for finding divisors of a number (Rust, C++, Python)
-[![License](https://img.shields.io/badge/License-MIT%20or%20Apache%202-green.svg)](#)
+Very FAST code for finding divisors of a number (Rust, C++, Python)  
+[![License](https://img.shields.io/badge/Licrnse-%20Apache%202.0-green.svg)](#)
 
 
 ### MANUAL
