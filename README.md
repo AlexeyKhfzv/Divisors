@@ -6,18 +6,18 @@ Very FAST code for finding divisors of a number (Rust, C++, Python)
 ![C++](https://img.shields.io/badge/C++-%2300599C.svg?logo=c%2B%2B&logoColor=white)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
 
-### MANUAL
+## MANUAL
 The first step: enter your number.  
 The second step: the program will print all divisors.  
 
-### CONSTRAINTS
+## CONSTRAINTS
 | Language | Constraints |
 | --- | --- |
 | Rust | 0 <= your number < 2<sup>128</sup> |
 | C++ | 0 <= your number < 2<sup>64</sup> |
 | Python | Any unsigned number (int) |
 
-### OUTPUT FORMAT
+## OUTPUT FORMAT
 ```bash
    This program returns divisors of a number.
    Enter the number:
