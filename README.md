@@ -37,7 +37,7 @@ Indeed, 2 × 3<sup>2</sup> × 5 × 3607 × 3803 = 1234567890!
 
 ## Time Complexity
 
-![scatter](scatter2.png)
+![scatter](scatter.png)
 xaxis - values 0 to 1 000 000 (includes 0 because my program returns 0 here)  
 yaxis - time duration, ns (nanoseconds)
 
