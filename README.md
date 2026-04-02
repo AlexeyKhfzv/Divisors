@@ -31,12 +31,14 @@ The second step: the program will print all divisors.
    ----------
    Finished: 118.353µs   # Execution time
 ```
-All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803)
-
-`3 ^2` - here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3<sup>2</sup> = 3 × 3).
-
-Indeed, 2 × 3<sup>2</sup> × 5 × 3607 × 3803 = 1234567890
+All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803).  
+`3 ^2` - here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3<sup>2</sup> = 3 × 3).  
+Indeed, 2 × 3<sup>2</sup> × 5 × 3607 × 3803 = 1234567890!
 
 ## Time Complexity
 
 ![scatter](scatter2.png)
+xaxis - values 0 to 1 000 000 (includes 0 because my program returns 0 here)  
+yaxis - time duration, ns (nanoseconds)
+
+The measurements based on the algorithm in the **Rust** language
