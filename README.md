@@ -16,7 +16,7 @@ kaadivisors = "2.0"
 
 # Example
 ```rust
-use std::time::{Instant};
+use std::time::Instant;
 use kaadivisors::get_divisors;
 
 fn main() {
