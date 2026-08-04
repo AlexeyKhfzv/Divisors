@@ -1,4 +1,4 @@
-# Kaadivisors - very fast algorithm for finding prime divisors of huge composite numbers.
+# Kaadivisors - very fast algorithm for finding prime divisors of huge composite numbers
 
 [My crate on Crates.io](https://crates.io/crates/kaadivisors)  
 `Algorithmic complexity: O(√n)` BUT **FASTER** than the famous crate [divisors](https://crates.io/crates/divisors)!
