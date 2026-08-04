@@ -5,7 +5,7 @@
 Even if we cannot reduce the time to find divisors when the number is prime, we can do it when our number is composite.
 So, this program finds all **prime divisors** by iterating throught the numbers up to the <ins>root of the greatiest divisor</ins>.
 
-Oh, and this program use generics, so everyone can pass <u>any unsigned integer as an argument</u> (u8, u16, u32, u64, u128)!
+Oh, and this program use generics, so everyone can pass <ins>any unsigned integer as an argument</ins> (u8, u16, u32, u64, u128)!
 
 # Cargo.toml
 ```toml
