@@ -1,34 +1,50 @@
-# KaaDivisors
-Simple CLI program for finding divisors of huge numbers
+# Kaadivisors - very fast algorithm for finding prime divisors of huge composite numbers.
 
-Very FAST. Written in Rust.
+`Algorithmic complexity: O(√n)` BUT **FASTER** than the famous crate [divisors](https://crates.io/crates/divisors)!
 
-[![License](https://img.shields.io/badge/License-%20Apache%202.0-green.svg)](#)
-[![License](https://img.shields.io/badge/License-%20MIT%20-green.svg)](#)
-[![Rust](https://img.shields.io/badge/Rust-%23000000.svg?e&logo=rust&logoColor=white)](#)
+Even if we cannot reduce the time to find divisors when the number is prime, we can do it when our number is composite.
+So, this program finds all **prime divisors** by iterating throught the numbers up to the <ins>root of the greatiest divisor</ins>.
 
-## Getting Started
-`cargo install kaadivisors`  
-`kaadivs`
+Oh, and this program use generics, so everyone can pass <u>any unsigned integer as an argument</u> (u8, u16, u32, u64, u128)!
 
-## Output Example
+# Cargo.toml
+```toml
+[dependencies]
+kaadivisors = "2.0"
 ```
-This program returns divisors of a number
-----------
-2 ^1
-3 ^2
-5 ^1
-3607 ^1
-3803 ^1
-----------
-Finished: 28.299µs
+
+# Example
+```rust
+use std::time::{Instant};
+use kaadivisors::get_divisors;
+
+fn main() {
+    let number_u32: u32 = 1234567890;
+    let start_u32 = Instant::now();
+    let res_u32 = get_divisors(number_u32); // Vec<(u32, u8)>
+    println!("Divisors (u32): {:?}\nFinished in {:?}", res_u32, start_u32.elapsed());
+
+    let number_u128: u128 = 123456789012345678901234567890;
+    let start_u128 = Instant::now();
+    let res_u128 = get_divisors(number_u128); // Vec<(u128, u8)>
+    println!("Divisors (u128): {:?}\nFinished in {:?}", res_u128, start_u128.elapsed());
+}
 ```
-All divisors are PRIME NUMBERS (2, 3, 5, 3607, 3803).
+**OUTPUT**: Vec<(divisor, power)>
+```
+Divisors (u32): [(2, 1), (3, 2), (5, 1), (3607, 1), (3803, 1)]
+Finished in 2.219µs
+Divisors (u128): [(2, 1), (3, 3), (5, 1), (7, 1), (13, 1), (31, 1), (37, 1), (211, 1), (241, 1), (2161, 1), (3607, 1), (3803, 1), (2906161, 1)]
+Finished in 3.594µs
+```
 
-`3 ^2` - here `3` is a <ins>prime divisor</ins>, `^2` is a <ins>power</ins> (3<sup>2</sup> = 3 × 3).
+# Algorithm
 
-Indeed, 2 × 3<sup>2</sup> × 5 × 3607 × 3803 = 1234567890
+* **Firstly**, we check divisibility by 2 and 3, and then iterate in increments of 6, since all prime divisors are of the form 6k ± 1.  
+* **Secondly**, we iterate through the numbers until the first divisor of our number is found.  
+In this case, we divide the number by it as much as possible (function: get_power), and then continue iterating through the numbers up to the <u>root of the result</u>.  
+* **Back to the previous step**
 
-## All Commands
-* `kaadivs` or `kaadivisors`
-* `kaadivs <your_number>` (example: kaadivs 123)
+# License
+MIT  
+Apache-2.0
