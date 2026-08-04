@@ -47,5 +47,4 @@ In this case, we divide the number by it as much as possible (function: get_powe
 * **Back to the previous step**
 
 # License
-MIT  
 Apache-2.0
