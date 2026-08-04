@@ -1,5 +1,6 @@
 # Kaadivisors - very fast algorithm for finding prime divisors of huge composite numbers.
 
+[My crate on Crates.io](https://crates.io/crates/kaadivisors)  
 `Algorithmic complexity: O(√n)` BUT **FASTER** than the famous crate [divisors](https://crates.io/crates/divisors)!
 
 Even if we cannot reduce the time to find divisors when the number is prime, we can do it when our number is composite.
